@@ -8,7 +8,7 @@ const {xss}= require('express-xss-sanitizer')
 const rateLimit=require('express-rate-limit')
 const hpp=require('hpp');
 const cors=require('cors')
-const swaggerUI = require('swagger-ui-express');
+
 
 dotenv.config({path:'./config/config.env'});
 
@@ -38,7 +38,7 @@ app.use(cors());
 app.use('/api/v1/restaurants',restaurants);
 app.use('/api/v1/auth',auth);
 app.use('/api/v1/reservations',reservations);
-app.use('/api-docs',swaggerUI.serve,swaggerUI.setup(swaggerDocs));
+
 
 
 const PORT = process.env.PORT|| 5000;
