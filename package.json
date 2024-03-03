@@ -1,5 +1,5 @@
 {
-  "name": "a-5-ktpmix",
+  "name": "project",
   "version": "1.0.0",
   "description": "[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/5MYO2FHt)",
   "main": "server.js",
@@ -29,6 +29,7 @@
     "ms": "^2.1.3",
     "mysql": "^2.18.1",
     "mysql2": "^3.9.2",
+    "nodemon": "^3.1.0",
     "punycode": "^2.3.1",
     "sift": "^16.0.1",
     "sparse-bitfield": "^3.0.3",
@@ -44,5 +45,13 @@
     "dev": "nodemon server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2110503TACEDT66/presentation-day-1-da-cuo-te-cuo-bu-yao-lai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/2110503TACEDT66/presentation-day-1-da-cuo-te-cuo-bu-yao-lai/issues"
+  },
+  "homepage": "https://github.com/2110503TACEDT66/presentation-day-1-da-cuo-te-cuo-bu-yao-lai#readme"
 }

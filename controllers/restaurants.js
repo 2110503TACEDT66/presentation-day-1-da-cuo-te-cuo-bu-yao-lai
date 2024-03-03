@@ -1,6 +1,5 @@
 
 const Restaurant = require('../models/Restaurant.js');
-const vacCenter = require('../models/VacCenter.js');
 //@desc      GET all restaurants
 //@route     GET /api/v1/restaurants
 //@access    Public
@@ -137,16 +136,3 @@ exports.deleteRestaurant=async (req,res,next)=>{
     }
 };
 
-exports.getVacCenters=async (req,res,next)=>{
-    vacCenter.getAll((err,data)=>{
-        if(err){
-            res.status(500).send({
-                message:err.message|| "Some error occurred while retrieving Vaccine Centers."
-            })
-        }
-        else{
-            res.send(data);
-        }
-    })
-
-}

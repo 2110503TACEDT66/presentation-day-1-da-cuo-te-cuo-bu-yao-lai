@@ -18,6 +18,8 @@ connectDB();
 const restaurants= require('./routes/restaurants.js');
 const auth= require('./routes/auth.js');
 const reservations= require('./routes/reservations.js')
+const menus = require('./routes/menus.js');
+
 const limiter=rateLimit({
     windowsMs:10*60*1000,
     max:100
@@ -38,6 +40,7 @@ app.use(cors());
 app.use('/api/v1/restaurants',restaurants);
 app.use('/api/v1/auth',auth);
 app.use('/api/v1/reservations',reservations);
+app.use('/api/v1/menus',menus);
 
 
 

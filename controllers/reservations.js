@@ -138,7 +138,7 @@ exports.updateReservation=async (req,res,next)=>{
 };
 
 
-exports.deleteRestaurant=async (req,res,next)=>{
+exports.deleteReservation=async (req,res,next)=>{
 
     
     try{
