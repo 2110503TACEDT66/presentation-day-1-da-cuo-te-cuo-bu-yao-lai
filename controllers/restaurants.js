@@ -71,7 +71,7 @@ exports.getRestaurants=async (req,res,next)=>{
     }
 };
 
-//@desc      GET all restaurant
+//@desc      GET one restaurant
 //@route     GET /api/v1/restaurants/:id
 //@access    Public
 exports.getRestaurant=async (req,res,next)=>{
