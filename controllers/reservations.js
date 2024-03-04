@@ -83,8 +83,7 @@ exports.addReservation = async (req, res, next) => {
 
     // Ensure reservation time is in the future
     const reservationTime = new Date(req.body.revDate);
-    const currentTime = new Date(req.body.createdAt);
-    console.log(reservationTime);
+    const currentTime = new Date(Date.now());
     if (reservationTime <= currentTime) {
       return res.status(400).json({
         success: false,
