@@ -105,7 +105,7 @@ exports.addReservation = async (req, res, next) => {
     ) {
       return res.status(400).json({
         success: false,
-        message: `Reservation time must be within open hours ${restaurant.openTimeStr} and close hours ${restaurant.closeTimeStr}`,
+        message: `Reservation time must be within open hours ${openTimeStr} and close hours ${closeTimeStr} (GMT+7)`,
       });
     }
 
