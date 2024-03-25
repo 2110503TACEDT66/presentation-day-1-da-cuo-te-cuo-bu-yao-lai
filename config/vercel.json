@@ -1,0 +1,16 @@
+{
+    "version" : 2,
+    "name": "presentation-day-1-da-cuo-te-cuo-bu-yao-lai",
+    "builds": [
+        {
+            "src": "server.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "server.js"
+        }
+    ]
+}
