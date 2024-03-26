@@ -81,33 +81,33 @@ exports.addReservation = async (req, res, next) => {
       });
     }
 
-    // Ensure reservation time is in the future
-    const reservationTime = new Date(req.body.revDate);
-    const currentTime = new Date(Date.now());
-    if (reservationTime <= currentTime) {
-      return res.status(400).json({
-        success: false,
-        message: `Reservation time must be in the future`,
-      });
-    }
+    // // Ensure reservation time is in the future
+    // const reservationTime = new Date(req.body.revDate);
+    // const currentTime = new Date(Date.now());
+    // if (reservationTime <= currentTime) {
+    //   return res.status(400).json({
+    //     success: false,
+    //     message: `Reservation time must be in the future`,
+    //   });
+    // }
 
-    // Combine revDate with openTime and closeTime
-    const openDateTime = new Date(req.body.revDate);
-    const closeDateTime = new Date(req.body.revDate);
-    const [openTimeStr, closeTimeStr] = restaurant.openCloseTime.split("-");
-    const [openHours, openMinutes] = openTimeStr.split(".");
-    const [closeHours, closeMinutes] = closeTimeStr.split(".");
-    openDateTime.setHours(openHours, openMinutes, 0);
-    closeDateTime.setHours(closeHours, closeMinutes, 0);
-    // Check if reservation time is within open and close times
-    if (
-      !(reservationTime >= openDateTime && reservationTime <= closeDateTime)
-    ) {
-      return res.status(400).json({
-        success: false,
-        message: `Reservation time must be within open hours ${openTimeStr} and close hours ${closeTimeStr} (GMT+7)`,
-      });
-    }
+    // // Combine revDate with openTime and closeTime
+    // const openDateTime = new Date(req.body.revDate);
+    // const closeDateTime = new Date(req.body.revDate);
+    // const [openTimeStr, closeTimeStr] = restaurant.openCloseTime.split("-");
+    // const [openHours, openMinutes] = openTimeStr.split(".");
+    // const [closeHours, closeMinutes] = closeTimeStr.split(".");
+    // openDateTime.setHours(openHours, openMinutes, 0);
+    // closeDateTime.setHours(closeHours, closeMinutes, 0);
+    // // Check if reservation time is within open and close times
+    // if (
+    //   !(reservationTime >= openDateTime && reservationTime <= closeDateTime)
+    // ) {
+    //   return res.status(400).json({
+    //     success: false,
+    //     message: `Reservation time must be within open hours ${openTimeStr} and close hours ${closeTimeStr} (GMT+7)`,
+    //   });
+    // }
 
     console.log(req.body);
 
